@@ -1,3 +1,4 @@
+package br.ufal.ic.queue;
 
 public class main {
 
@@ -12,12 +13,12 @@ public class main {
 			newStringQueue.insert("banana");
 			newStringQueue.insert("orange");
 			newStringQueue.insert("apple");
-	        System.out.println(newStringQueue.toString());
+			System.out.println(newStringQueue.toString());
 			System.out.println(newStringQueue.getFirst());
-	        System.out.println(newStringQueue.getSize());
+			System.out.println(newStringQueue.getSize());
 
-	        newStringQueue.remove();
-	        System.out.println(newStringQueue.toString());
+			newStringQueue.remove();
+			System.out.println(newStringQueue.toString());
 			System.out.println(newStringQueue.getFirst());
 			System.out.println(newStringQueue.getSize());
 

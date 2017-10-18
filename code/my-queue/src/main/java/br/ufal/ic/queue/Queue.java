@@ -1,3 +1,5 @@
+package br.ufal.ic.queue;
+
 import java.util.Arrays;
 
 public class Queue<E> {
@@ -7,14 +9,14 @@ public class Queue<E> {
 	private int head;
     private int tail;
 
-    Queue(int size) {
+    public Queue(int size) {
         this.maxSize = size;
         this.queueList = (E[]) new Object[size];
         this.head = -1;
         this.tail = -1;
     }
 
-    int getSize(){
+    public int getSize(){
     	if(this.isEmpty()){
     		return 0;
     	} else {
@@ -22,11 +24,11 @@ public class Queue<E> {
     	}
     }
 
-    E getFirst(){
+    public E getFirst(){
     	return this.queueList[this.head];
     }
 
-    void insert(E value) throws FullQueueException {
+    public void insert(E value) throws FullQueueException {
     	// If queue is full
         if ((tail + 1) % maxSize == head) {
             throw new FullQueueException("Queue is full");
@@ -42,7 +44,7 @@ public class Queue<E> {
         }
     }
 
-    void remove() throws EmptyQueueException {
+    public void remove() throws EmptyQueueException {
         // If queue is empty
         if (this.isEmpty()) {
             throw new EmptyQueueException("Queue is empty");
@@ -58,7 +60,7 @@ public class Queue<E> {
         }
     }
 
-    boolean isEmpty() {
+    public boolean isEmpty() {
         return (head == -1 && tail == -1);
     }
 
